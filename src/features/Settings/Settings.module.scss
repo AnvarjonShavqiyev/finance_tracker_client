@@ -1,0 +1,10 @@
+@use '../../styles/index.scss' as *;
+
+.wrapper {
+    height: 100%;
+    @include flex-between;
+
+    .saveButton {
+        align-self: flex-start;
+    }
+}

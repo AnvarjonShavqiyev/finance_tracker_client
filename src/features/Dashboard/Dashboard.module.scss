@@ -1,0 +1,19 @@
+@use '../../styles/index.scss' as *;
+
+.container {
+    display: flex;
+    height: 100%;
+    
+    .outletWrapper {
+        padding: 20px;
+        width: 100%;
+        
+        .outlet {
+            padding: 24px;
+            background-color: $outletBackground;
+            border-radius: 16px;
+            overflow-y: auto;
+            height: 100%;
+        }
+    }
+}

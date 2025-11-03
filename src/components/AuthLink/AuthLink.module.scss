@@ -1,0 +1,9 @@
+@use '../../styles/index.scss' as *;
+
+.button {
+    color: $linkColor;    
+    padding: 10px;
+    border-radius: 26px;
+    background-color: $authLinkBackground;
+    font-size: 24px;
+}

@@ -1,0 +1,21 @@
+@use '../../styles/index.scss' as *;
+
+.container {
+    width: 100%;
+    @include section-flex;
+    
+    .title {
+       @include flex-between;
+       width: 100%;
+    }
+}
+
+.form {
+    width: $defaultFormWidth;
+    @include section-flex;
+
+    .category {
+        display: flex;
+        align-items: center;
+    }
+}

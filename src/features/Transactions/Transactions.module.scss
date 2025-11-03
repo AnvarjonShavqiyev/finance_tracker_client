@@ -1,0 +1,39 @@
+@use '../../styles/index.scss' as *;
+
+.container {
+    width: 100%;
+    @include section-flex;
+    
+    .title {
+       @include flex-between;
+       width: 100%;
+    }
+}
+
+.form {
+    width: $transactionFormWidth;
+    @include section-flex;
+    
+    .categoryWrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+.settingsWrapper {
+    width: $settingsWrapperWidth;
+    @include section-flex;
+    
+    .datePickers {
+        display: flex;
+        gap: 10px;
+    }
+
+    .amountFilterWrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+    }
+}

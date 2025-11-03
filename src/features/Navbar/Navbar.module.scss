@@ -1,0 +1,7 @@
+@use '../../styles/index.scss' as *;
+
+.navbar {
+    @include flex-between;
+    color: $linkColor;
+    padding: 10px 0;    
+}
