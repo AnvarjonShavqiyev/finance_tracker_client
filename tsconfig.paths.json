@@ -14,26 +14,14 @@
         "@constants":[
            "constants/index.ts"
         ],
-        "@features/*":[
-           "features/*"
-        ],
-        "@assets/*":[
-           "assets/*"
-        ],
-        "@styles/*":[
-           "styles/*"
-        ],
         "@customTypes":[
            "types/index.ts"
-        ],
-        "@utils/*":[
-           "utils/*"
         ],
         "@services/*":[
          "services/*"
          ],
-         "@helpers":[
-            "/helpers/*"
+         "@helpers/*":[
+            "helpers/*"
          ]
      }
   }

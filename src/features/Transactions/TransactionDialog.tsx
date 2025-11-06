@@ -11,7 +11,7 @@ import { useGetUsersQuery } from '@services/users';
 import { skipToken } from '@reduxjs/toolkit/query';
 import { useEffect } from 'react';
 import { getTransactionBody, getTransactionTitle } from './helpers';
-import { getSubmitButtonText } from 'helpers/getSubmitButtonText';
+import { getSubmitButtonText } from '@helpers/getSubmitButtonText';
 import { setTransactionDialog } from '@store/reducers/dialog.reducer';
 
 import Dialog from '@mui/material/Dialog';

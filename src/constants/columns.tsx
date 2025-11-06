@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import { ACTIONS, Budget, Transaction } from "@customTypes";
 import { setBudgetDialog, setTransactionDialog } from "@store/reducers/dialog.reducer";
-import { transformDate } from "helpers/transformDate";
+import { transformDate } from "@helpers/transformDate";
 import { AppDispatch } from "@store/store";
 import { HYPHEN } from "@constants";
 

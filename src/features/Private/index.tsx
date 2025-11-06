@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import { validateToken } from "helpers/validateToken";
+import { validateToken } from "@helpers/validateToken";
 import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
 import { RootState } from "@store/store";
 import { logOut } from "@store/reducers/user.reducer";

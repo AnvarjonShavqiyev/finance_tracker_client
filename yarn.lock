@@ -1072,14 +1072,14 @@
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-7.3.5.tgz"
   integrity sha512-kOLwlcDPnVz2QMhiBv0OQ8le8hTCqKM9cRXlfVPL91l3RGeOsxrIhNRsUt3Xb8wb+pTVUolW+JXKym93vRKxCw==
 
-"@mui/icons-material@^7.3.5":
+"@mui/icons-material@7.3.5":
   version "7.3.5"
   resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-7.3.5.tgz"
   integrity sha512-LciL1GLMZ+VlzyHAALSVAR22t8IST4LCXmljcUSx2NOutgO2XnxdIp8ilFbeNf9wpo0iUFbAuoQcB7h+HHIf3A==
   dependencies:
     "@babel/runtime" "^7.28.4"
 
-"@mui/material@^5.15.14 || ^6.0.0 || ^7.0.0", "@mui/material@^7.3.5":
+"@mui/material@^5.15.14 || ^6.0.0 || ^7.0.0", "@mui/material@^7.3.5", "@mui/material@7.3.5":
   version "7.3.5"
   resolved "https://registry.npmjs.org/@mui/material/-/material-7.3.5.tgz"
   integrity sha512-8VVxFmp1GIm9PpmnQoCoYo0UWHoOrdA57tDL62vkpzEgvb/d71Wsbv4FRg7r1Gyx7PuSo0tflH34cdl/NvfHNQ==
@@ -1151,7 +1151,7 @@
     prop-types "^15.8.1"
     react-is "^19.2.0"
 
-"@mui/x-date-pickers@^8.16.0":
+"@mui/x-date-pickers@8.16.0":
   version "8.16.0"
   resolved "https://registry.npmjs.org/@mui/x-date-pickers/-/x-date-pickers-8.16.0.tgz"
   integrity sha512-zvUoO9ImWiKRaOWvQVbB1vCa6aUQIX5GM0tJ+nAyNNIVV0VqpXz3CvkRR6ovBBFzIcChc7FXlqrMKcJ//EhePQ==
@@ -1377,6 +1377,13 @@
   version "7.0.15"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
+
+"@types/node@^20.19.0 || >=22.12.0", "@types/node@^24.10.0":
+  version "24.10.0"
+  resolved "https://registry.npmjs.org/@types/node/-/node-24.10.0.tgz"
+  integrity sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==
+  dependencies:
+    undici-types "~7.16.0"
 
 "@types/parse-json@^4.0.0":
   version "4.0.2"
@@ -3862,6 +3869,11 @@ unbox-primitive@^1.1.0:
     has-symbols "^1.1.0"
     which-boxed-primitive "^1.1.1"
 
+undici-types@~7.16.0:
+  version "7.16.0"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz"
+  integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
+
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.1.tgz"
@@ -3922,7 +3934,7 @@ use-sync-external-store@^1.4.0, use-sync-external-store@^1.6.0:
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz"
   integrity sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==
 
-vite-plugin-pwa@^1.1.0:
+vite-plugin-pwa@1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/vite-plugin-pwa/-/vite-plugin-pwa-1.1.0.tgz"
   integrity sha512-VsSpdubPzXhHWVINcSx6uHRMpOHVHQcHsef1QgkOlEoaIDAlssFEW88LBq1a59BuokAhsh2kUDJbaX1bZv4Bjw==

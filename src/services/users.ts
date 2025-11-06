@@ -1,4 +1,4 @@
-import { transformToOptions } from "helpers/transformToOptions";
+import { transformToOptions } from "@helpers/transformToOptions";
 import { Login, Option, Register } from "@customTypes";
 import { api } from "./api";
 

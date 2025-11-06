@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import path from 'path'
 
 export default defineConfig({
   plugins: [
@@ -31,5 +32,18 @@ export default defineConfig({
         navigateFallback: '/index.html'
       }
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@constants': path.resolve(__dirname, 'src/constants/index.ts'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@features': path.resolve(__dirname, 'src/features'),
+      '@services': path.resolve(__dirname, 'src/services'),
+      '@customTypes': path.resolve(__dirname, 'src/types/index.ts'),
+      '@helpers': path.resolve(__dirname, 'src/helpers'),
+    },
+  },
 })
