@@ -1,5 +1,4 @@
-import { ApiResponse, Category, CreateCategory, EditCategory } from "../types";
-import { Option } from "../types/common";
+import { ApiResponse, Category, CreateCategory, EditCategory, Option } from "@customTypes";
 import { api } from "./api";
 
 export const categoryApi = api.injectEndpoints({

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
 import styles from './Hero.module.scss';
-import AuthLink from "../../components/AuthLink";
+import AuthLink from "@components/AuthLink";
 
 const Hero = () => {
   return (

@@ -1,11 +1,11 @@
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
-import { useGetBudgetsQuery } from "../../services/budget";
-import { budgetTableColumns } from "../../constants";
-import { useAppDispatch } from "../../hooks/reduxHooks";
-import { setBudgetDialog } from "../../store/reducers/dialog.reducer";
-import { ACTIONS } from "../../types";
+import { useGetBudgetsQuery } from "@services/budget";
+import { budgetTableColumns } from "@constants";
+import { useAppDispatch } from "@hooks/reduxHooks";
+import { setBudgetDialog } from "@store/reducers/dialog.reducer";
+import { ACTIONS } from "@customTypes";
 
-import CustomTable from "../../components/Table";
+import CustomTable from "@components/Table";
 import BudgetDialog from "./BudgetDialog";
 
 import styles from './Budgets.module.scss';

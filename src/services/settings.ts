@@ -1,4 +1,4 @@
-import { SaveSettings, Settings } from "../types";
+import { SaveSettings, Settings } from "@customTypes";
 import { api } from "./api";
 
 const settingsApi = api.injectEndpoints({

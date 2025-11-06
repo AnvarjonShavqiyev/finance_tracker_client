@@ -1,4 +1,4 @@
-import { CategorySpends, DownloadReports, PERIOD, SpendsVsIncome, Transaction } from "../types";
+import { CategorySpends, DownloadReports, PERIOD, SpendsVsIncome, Transaction } from "@customTypes";
 import { api } from "./api";
 
 export const reportsApi = api.injectEndpoints({

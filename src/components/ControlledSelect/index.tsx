@@ -1,7 +1,7 @@
 import { Controller, Control, FieldValues, Path } from "react-hook-form";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import { Option } from "../../types/common";
-import { EMPTY_STRING } from "../../constants";
+import { Option } from "@customTypes";
+import { EMPTY_STRING } from "@constants";
 
 interface ControlledSelectProps<T extends FieldValues> {
   name: Path<T>;

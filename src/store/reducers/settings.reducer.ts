@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { DownloadReportsAndSettingsForm, TransactionFiltersForm } from "../../types";
-import { defaultReportSettings, defaultTransactionFilters } from "../../constants";
+import { DownloadReportsAndSettingsForm, TransactionFiltersForm } from "@customTypes";
+import { defaultReportSettings, defaultTransactionFilters } from "@constants";
 
 interface SettingsState {
     reportSettings: DownloadReportsAndSettingsForm,

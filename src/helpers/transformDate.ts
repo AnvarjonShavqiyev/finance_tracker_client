@@ -1,4 +1,4 @@
-import { FIRST_ELEMENT, ZERO } from "../constants";
+import { FIRST_ELEMENT, ZERO } from "@constants";
 
 export const transformDate = (date: string) => {
     const dateAndHour = date.split('T');

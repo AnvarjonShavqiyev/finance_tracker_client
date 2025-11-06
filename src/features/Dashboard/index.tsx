@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
 
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "@components/Sidebar";
 
 import styles from './Dashboard.module.scss';
 

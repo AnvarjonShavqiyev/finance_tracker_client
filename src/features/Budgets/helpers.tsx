@@ -1,5 +1,5 @@
-import { ACTIONS, BudgetForm } from "../../types";
-import { EMPTY_STRING } from "../../constants";
+import { ACTIONS, BudgetForm } from "@customTypes";
+import { EMPTY_STRING } from "@constants";
 
 export const getBudgetTitle = (type?: ACTIONS) => {
     switch (type) {

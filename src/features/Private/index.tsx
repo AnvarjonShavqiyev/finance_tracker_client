@@ -1,9 +1,9 @@
 import { useEffect, useMemo } from "react";
-import { validateToken } from "../../helpers/validateToken";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { RootState } from "../../store/store";
-import { logOut } from "../../store/reducers/user.reducer";
-import { AuthOptions } from "../../constants";
+import { validateToken } from "helpers/validateToken";
+import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
+import { RootState } from "@store/store";
+import { logOut } from "@store/reducers/user.reducer";
+import { AuthOptions } from "@constants";
 
 import Auth from "../Auth";
 import Dashboard from "../Dashboard";

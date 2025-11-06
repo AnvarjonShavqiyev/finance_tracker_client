@@ -1,5 +1,5 @@
-import { ACTIONS, AMOUNT_TYPE, PERIOD, REPEAT_INTERVAL } from "../types";
-import { CURRENCY, TRANSACTION_TYPES } from "./common";
+import { ACTIONS, AMOUNT_TYPE, PERIOD, REPEAT_INTERVAL } from "@customTypes";
+import { CURRENCY, TRANSACTION_TYPES } from "@constants";
 
 export const amountTypeOptions = [
   {

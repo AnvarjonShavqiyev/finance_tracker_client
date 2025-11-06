@@ -1,9 +1,9 @@
 import { Box, Button } from "@mui/material";
-import { transformDate } from "../helpers/transformDate";
-import { ACTIONS, Budget, Transaction } from "../types";
-import { AppDispatch } from "../store/store";
-import { setBudgetDialog, setTransactionDialog } from "../store/reducers/dialog.reducer";
-import { HYPHEN } from "./common";
+import { ACTIONS, Budget, Transaction } from "@customTypes";
+import { setBudgetDialog, setTransactionDialog } from "@store/reducers/dialog.reducer";
+import { transformDate } from "helpers/transformDate";
+import { AppDispatch } from "@store/store";
+import { HYPHEN } from "@constants";
 
 import styles from './columns.module.scss';
 

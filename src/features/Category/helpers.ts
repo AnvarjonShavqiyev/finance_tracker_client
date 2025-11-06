@@ -1,5 +1,5 @@
-import { ACTIONS } from "../../types";
-import { EMPTY_STRING } from "../../constants";
+import { ACTIONS } from "@customTypes";
+import { EMPTY_STRING } from "@constants";
 
 export const getCategoryTitle = (type?: ACTIONS) => {
     switch (type) {

@@ -1,23 +1,23 @@
-import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
-import { RootState } from '../../store/store';
+import { useAppDispatch, useAppSelector } from '@hooks/reduxHooks';
+import { RootState } from '@store/store';
 import { useForm, useWatch } from 'react-hook-form';
-import { ACTIONS, TransactionForm } from '../../types';
-import { ControlledSelect } from '../../components/ControlledSelect';
-import { CURRENCY, currencyOptions, defaultTransactionValues, MULTILINE_COUNT, repeatIntervalOptions, TRANSACTION_TYPES, transactionOptions } from '../../constants';
+import { ACTIONS, TransactionForm } from '@customTypes';
+import { ControlledSelect } from '@components/ControlledSelect';
+import { CURRENCY, currencyOptions, defaultTransactionValues, MULTILINE_COUNT, repeatIntervalOptions, TRANSACTION_TYPES, transactionOptions } from '@constants';
 import { Box, Button, DialogActions, Typography } from '@mui/material';
-import { useGetCategoriesQuery } from '../../services/category';
-import { useCreateTransactionMutation, useDeleteTransactionMutation, useGetTransactionQuery, useUpdateTransactionMutation } from '../../services/transaction';
-import { useGetUsersQuery } from '../../services/users';
+import { useGetCategoriesQuery } from '@services/category';
+import { useCreateTransactionMutation, useDeleteTransactionMutation, useGetTransactionQuery, useUpdateTransactionMutation } from '@services/transaction';
+import { useGetUsersQuery } from '@services/users';
 import { skipToken } from '@reduxjs/toolkit/query';
 import { useEffect } from 'react';
 import { getTransactionBody, getTransactionTitle } from './helpers';
-import { getSubmitButtonText } from '../../helpers/getSubmitButtonText';
-import { setTransactionDialog } from '../../store/reducers/dialog.reducer';
+import { getSubmitButtonText } from 'helpers/getSubmitButtonText';
+import { setTransactionDialog } from '@store/reducers/dialog.reducer';
 
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import ControlledTextField from '../../components/ControlledTextField';
+import ControlledTextField from '@components/ControlledTextField';
 import Category from '../Category';
 import CategoryDialog from '../Category/CategoryDialog';
 

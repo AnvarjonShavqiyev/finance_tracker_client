@@ -1,4 +1,4 @@
-import { ApiResponse, Budget, BudgetRequest, EditBudget } from "../types";
+import { ApiResponse, Budget, BudgetRequest, EditBudget } from "@customTypes";
 import { api } from "./api";
 
 const budgetApi = api.injectEndpoints({

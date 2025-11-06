@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CURRENCY, FIRST_ELEMENT, SIX, TRANSACTION_TYPES, TWO } from "../constants";
+import { CURRENCY, FIRST_ELEMENT, SIX, TRANSACTION_TYPES, TWO } from "@constants";
 import { AMOUNT_TYPE, PERIOD, REPEAT_INTERVAL } from "./common";
 
 export const SignInSchema = z.object({

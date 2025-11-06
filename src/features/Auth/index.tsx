@@ -1,15 +1,15 @@
 import { useForm } from 'react-hook-form';
-import { AuthOptions, CREATED_CODE, defaultSignInValues, defaultSignUpValues, SIDEBAR_ROUTES, SIGN_IN_URL, SUCCES_CODE, ZERO } from '../../constants';
-import { SignInSchema, SignUpSchema, type SignInForm, type SignUpForm } from '../../types';
+import { AuthOptions, CREATED_CODE, defaultSignInValues, defaultSignUpValues, SIDEBAR_ROUTES, SIGN_IN_URL, SUCCES_CODE, ZERO } from '@constants';
+import { SignInSchema, SignUpSchema, type SignInForm, type SignUpForm } from '@customTypes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import { useLoginUserMutation, useRegisterUserMutation } from '../../services/users';
+import { useLoginUserMutation, useRegisterUserMutation } from '@services/users';
 import { useMemo } from 'react';
-import { useAppDispatch } from '../../hooks/reduxHooks';
-import { setToken } from '../../store/reducers/user.reducer';
+import { useAppDispatch } from '@hooks/reduxHooks';
+import { setToken } from '@store/reducers/user.reducer';
 
-import ControlledTextField from '../../components/ControlledTextField';
+import ControlledTextField from '@components/ControlledTextField';
 
 import styles from './Auth.module.scss';
 

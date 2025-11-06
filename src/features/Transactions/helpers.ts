@@ -1,5 +1,5 @@
-import { ACTIONS, REPEAT_INTERVAL, TransactionForm } from "../../types";
-import { EMPTY_STRING } from "../../constants";
+import { ACTIONS, REPEAT_INTERVAL, TransactionForm } from "@customTypes";
+import { EMPTY_STRING } from "@constants";
 
 export const getTransactionTitle = (type: ACTIONS) => {
     switch (type) {
@@ -12,7 +12,7 @@ export const getTransactionTitle = (type: ACTIONS) => {
         default:
             return EMPTY_STRING;
     }
-}
+};
 
 export const getTransactionBody = (data: TransactionForm) => {
     return {
@@ -20,4 +20,4 @@ export const getTransactionBody = (data: TransactionForm) => {
         amount: +data.amount,
         isRecurring: data.repeatInterval !== REPEAT_INTERVAL.NONE ? true : false,
     }
-}
+};

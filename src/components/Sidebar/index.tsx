@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { EMPTY_STRING, SIDEBAR_ROUTES } from '../../constants';
+import { EMPTY_STRING, SIDEBAR_ROUTES } from '@constants';
 
 import styles from './Sidebar.module.scss';
 

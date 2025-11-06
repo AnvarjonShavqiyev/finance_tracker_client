@@ -1,14 +1,14 @@
 import { Box, Button, CircularProgress, IconButton, Tooltip, Typography } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { ACTIONS } from "../../types/common";
+import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
+import { ACTIONS } from "@customTypes";
 import { TransactionDialog } from "./TransactionDialog";
-import { useGetTransactionsQuery } from "../../services/transaction";
-import { transactionTableColumns } from "../../constants";
-import { setTransactionDialog, setTransactionFiltersDialog } from "../../store/reducers/dialog.reducer";
+import { useGetTransactionsQuery } from "@services/transaction";
+import { transactionTableColumns } from "@constants";
+import { setTransactionDialog, setTransactionFiltersDialog } from "@store/reducers/dialog.reducer";
 import { CiFilter } from "react-icons/ci";
 import { TransactionFiltersDialog } from "./TransactionFilterDialog";
 
-import CustomTable from "../../components/Table";
+import CustomTable from "@components/Table";
 import styles from './Transactions.module.scss';
 
 const Transactions = () => {

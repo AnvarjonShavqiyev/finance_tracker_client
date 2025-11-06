@@ -1,5 +1,5 @@
-import { ACTIONS, AMOUNT_TYPE, PERIOD } from "../types";
-import { CURRENCY, DEFUALT_TOP_N_TRANSACTIONS, EMPTY_STRING, TRANSACTION_TYPES, ZERO } from "./common";
+import { ACTIONS, AMOUNT_TYPE, PERIOD } from "@customTypes";
+import { CURRENCY, DEFUALT_TOP_N_TRANSACTIONS, EMPTY_STRING, TRANSACTION_TYPES, ZERO } from "@constants";
 
 export const defaultDialog = {
     isOpen: false,

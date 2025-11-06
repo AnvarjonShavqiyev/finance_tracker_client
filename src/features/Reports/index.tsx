@@ -1,15 +1,15 @@
 import { Box, Divider, IconButton, Tooltip, Typography } from "@mui/material";
-import { useGetSpendingVsIncomeQuery, useGetSpendsByCategoryQuery, useGetTopNTransactionsQuery } from "../../services/reports";
-import { REPORTS_DIALOG_TYPE, transactionBaseColumns } from "../../constants";
+import { useGetSpendingVsIncomeQuery, useGetSpendsByCategoryQuery, useGetTopNTransactionsQuery } from "@services/reports";
+import { REPORTS_DIALOG_TYPE, transactionBaseColumns } from "@constants";
 import { getSpendsByCategoryOptions, getSpendsVsIncomeOptions } from "./helpers";
 import { FiDownload } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { setReportsAndSettingsDialog } from "../../store/reducers/dialog.reducer";
-import { RootState } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
+import { setReportsAndSettingsDialog } from "@store/reducers/dialog.reducer";
+import { RootState } from "@store/store";
 
-import Charts from "../../components/Charts";
-import CustomTable from "../../components/Table";
+import Charts from "@components/Charts";
+import CustomTable from "@components/Table";
 import ReportsAndSettingsDialog from "./ReportsAndSettingsDialog";
 
 import styles from './Reports.module.scss';

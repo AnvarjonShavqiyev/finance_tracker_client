@@ -1,4 +1,4 @@
-import { REPORTS_DIALOG_TYPE, TRANSACTION_TYPES } from "../constants";
+import { REPORTS_DIALOG_TYPE, TRANSACTION_TYPES } from "@constants";
 
 export type Nullable<T> = T | null;
 

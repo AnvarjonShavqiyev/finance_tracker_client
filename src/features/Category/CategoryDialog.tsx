@@ -1,18 +1,18 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { RootState } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
+import { RootState } from "@store/store";
 import { useForm } from "react-hook-form";
-import { ACTIONS, CategoryForm, ErrorMessage } from "../../types";
-import { useCreateCategoryMutation, useDeleteCategoryMutation, useGetCategoryQuery, useUpdateCategoryMutation } from "../../services/category";
+import { ACTIONS, CategoryForm, ErrorMessage } from "@customTypes";
+import { useCreateCategoryMutation, useDeleteCategoryMutation, useGetCategoryQuery, useUpdateCategoryMutation } from "@services/category";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useEffect } from "react";
-import { getSubmitButtonText } from "../../helpers/getSubmitButtonText";
+import { getSubmitButtonText } from "helpers/getSubmitButtonText";
 import { getCategoryTitle } from "./helpers";
 import { useSnackbar } from "notistack";
-import { CONFLICT_CODE, EMPTY_STRING, SNACKBAR_ERROR } from "../../constants";
-import { setCategoryDialog } from "../../store/reducers/dialog.reducer";
+import { CONFLICT_CODE, EMPTY_STRING, SNACKBAR_ERROR } from "@constants";
+import { setCategoryDialog } from "@store/reducers/dialog.reducer";
 
-import ControlledTextField from "../../components/ControlledTextField";
+import ControlledTextField from "@components/ControlledTextField";
 
 import styles from './Category.module.scss';
 

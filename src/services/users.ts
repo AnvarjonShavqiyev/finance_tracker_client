@@ -1,5 +1,5 @@
-import { transformToOptions } from "../helpers/transformToOptions";
-import { Login, Option, Register } from "../types";
+import { transformToOptions } from "helpers/transformToOptions";
+import { Login, Option, Register } from "@customTypes";
 import { api } from "./api";
 
 export const usersApi = api.injectEndpoints({

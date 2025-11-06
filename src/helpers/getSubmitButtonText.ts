@@ -1,5 +1,5 @@
-import { EMPTY_STRING } from "../constants";
-import { ACTIONS } from "../types";
+import { EMPTY_STRING } from "@constants";
+import { ACTIONS } from "@customTypes";
 
 export const getSubmitButtonText = (type?: ACTIONS) => {
     switch (type) {

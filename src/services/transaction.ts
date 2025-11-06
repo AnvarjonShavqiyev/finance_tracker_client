@@ -1,4 +1,4 @@
-import { ApiResponse, EditTransaction, Transaction, TransactionFiltersForm, Transactions } from "../types";
+import { ApiResponse, EditTransaction, Transaction, TransactionFiltersForm, Transactions } from "@customTypes";
 import { api } from "./api";
 
 export const transactionApi = api.injectEndpoints({

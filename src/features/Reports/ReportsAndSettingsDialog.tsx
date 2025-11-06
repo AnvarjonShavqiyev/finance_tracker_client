@@ -1,17 +1,17 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
 import { useForm } from "react-hook-form";
-import { DownloadReportsAndSettingsForm } from "../../types";
-import { ControlledSelect } from "../../components/ControlledSelect";
-import { periodOptions, REPORTS_DIALOG_TYPE } from "../../constants";
-import { useLazyDownloadReportQuery } from "../../services/reports";
+import { DownloadReportsAndSettingsForm } from "@customTypes";
+import { ControlledSelect } from "@components/ControlledSelect";
+import { periodOptions, REPORTS_DIALOG_TYPE } from "@constants";
+import { useLazyDownloadReportQuery } from "@services/reports";
 import {saveAs} from 'file-saver';
-import { setReportsAndSettingsDialog } from "../../store/reducers/dialog.reducer";
-import { setReportSettings } from "../../store/reducers/settings.reducer";
+import { setReportsAndSettingsDialog } from "@store/reducers/dialog.reducer";
+import { setReportSettings } from "@store/reducers/settings.reducer";
 import { useMemo } from "react";
 
 import styles from './Reports.module.scss';
-import ControlledTextField from "../../components/ControlledTextField";
+import ControlledTextField from "@components/ControlledTextField";
 
 const ReportsAndSettingsDialog = () => {
     const {isOpen, type} = useAppSelector((state) => state.dialog.reportsAndSettingsDialog);

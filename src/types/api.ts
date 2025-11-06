@@ -1,4 +1,4 @@
-import { CURRENCY } from "../constants";
+import { CURRENCY } from "@constants";
 import { PERIOD } from "./common";
 import { SettingsForm } from "./form";
 

@@ -1,4 +1,4 @@
-import { ApiResponse, Option, User } from "../types";
+import { ApiResponse, Option, User } from "@customTypes";
 
 export const transformToOptions = (res: ApiResponse<User[]>): Option[] => {
   return res.payload.map(({ id, username }) => ({

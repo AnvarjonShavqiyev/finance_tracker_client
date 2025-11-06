@@ -1,6 +1,6 @@
 import { TopLevelFormatterParams } from "echarts/types/dist/shared.js";
-import { ZERO } from "../../constants";
-import { CategorySpends, SpendsVsIncome, SpendsVsIncomeGrouped } from "../../types";
+import { ZERO } from "@constants";
+import { CategorySpends, SpendsVsIncome, SpendsVsIncomeGrouped } from "@customTypes";
 
 import * as echarts from "echarts";
 

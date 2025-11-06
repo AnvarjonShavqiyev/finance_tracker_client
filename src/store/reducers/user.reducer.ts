@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Nullable } from "../../types/common";
+import { Nullable } from "@customTypes";
 
 interface UserState {
     token: Nullable<string>

@@ -1,11 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { SettingsForm } from "../../types";
-import { useGetSettingsQuery, useSaveSettingsMutation } from "../../services/settings";
-import { defaultSettings } from "../../constants";
+import { SettingsForm } from "@customTypes";
+import { useGetSettingsQuery, useSaveSettingsMutation } from "@services/settings";
+import { defaultSettings } from "@constants";
 import { useEffect } from "react";
 
-import ControlledSwitch from "../../components/ControlledSwitch";
+import ControlledSwitch from "@components/ControlledSwitch";
 import styles from './Settings.module.scss';
 
 const Settings = () => {

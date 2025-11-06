@@ -1,9 +1,9 @@
 import { MouseEvent, useState } from "react";
 import { Box, IconButton, Menu, MenuItem } from "@mui/material";
-import { ACTIONS, Nullable } from "../../types";
-import { categoryActions } from "../../constants";
-import { useAppDispatch } from "../../hooks/reduxHooks";
-import { setCategoryDialog } from "../../store/reducers/dialog.reducer";
+import { ACTIONS, Nullable } from "@customTypes";
+import { categoryActions } from "@constants";
+import { useAppDispatch } from "@hooks/reduxHooks";
+import { setCategoryDialog } from "@store/reducers/dialog.reducer";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 

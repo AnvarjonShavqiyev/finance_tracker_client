@@ -1,6 +1,6 @@
 import { jwtDecode } from "jwt-decode";
-import { JwtPayload, Nullable } from "../types/common";
-import { THOUSAND } from "../constants";
+import { JwtPayload, Nullable } from "@customTypes";
+import { THOUSAND } from "@constants";
 
 export const validateToken = (token: Nullable<string>): boolean => {
   if (!token) return false;

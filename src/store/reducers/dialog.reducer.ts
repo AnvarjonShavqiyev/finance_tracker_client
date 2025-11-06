@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Dialog } from "../../types/common";
-import { defaultDialog } from "../../constants";
+import { Dialog } from "@customTypes";
+import { defaultDialog } from "@constants";
 
 interface categoryState {
     categoryDialog: Dialog,
