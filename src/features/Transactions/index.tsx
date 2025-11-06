@@ -8,7 +8,7 @@ import { setTransactionDialog, setTransactionFiltersDialog } from "../../store/r
 import { CiFilter } from "react-icons/ci";
 import { TransactionFiltersDialog } from "./TransactionFilterDialog";
 
-import CustomTable from "../../Components/Table";
+import CustomTable from "../../components/Table";
 import styles from './Transactions.module.scss';
 
 const Transactions = () => {

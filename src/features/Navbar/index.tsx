@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-import AuthLink from "../../Components/AuthLink";
+import AuthLink from "../../components/AuthLink";
 
 import styles from './Navbar.module.scss';
 

@@ -4,7 +4,7 @@ import { RootState } from "../../store/store";
 import { useForm } from "react-hook-form";
 import { ACTIONS, BudgetForm, ErrorMessage } from "../../types";
 import { setBudgetDialog } from "../../store/reducers/dialog.reducer";
-import { ControlledSelect } from "../../Components/ControlledSelect";
+import { ControlledSelect } from "../../components/ControlledSelect";
 import { useGetCategoriesQuery } from "../../services/category";
 import { CONFLICT_CODE, CURRENCY, currencyOptions, NOT_FOUND_CODE, SNACKBAR_ERROR } from "../../constants";
 import { useCreateBudgetMutation, useDeleteBudgetMutation, useEditBudgetMutation, useGetBudgetQuery } from "../../services/budget";
@@ -16,7 +16,7 @@ import { useEffect } from "react";
 
 import CategoryDialog from "../Category/CategoryDialog";
 import Category from "../Category";
-import ControlledTextField from "../../Components/ControlledTextField";
+import ControlledTextField from "../../components/ControlledTextField";
 
 import styles from './Budgets.module.scss';
 

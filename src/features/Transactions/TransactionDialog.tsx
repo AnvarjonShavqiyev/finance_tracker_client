@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { RootState } from '../../store/store';
 import { useForm, useWatch } from 'react-hook-form';
 import { ACTIONS, TransactionForm } from '../../types';
-import { ControlledSelect } from '../../Components/ControlledSelect';
+import { ControlledSelect } from '../../components/ControlledSelect';
 import { CURRENCY, currencyOptions, defaultTransactionValues, MULTILINE_COUNT, repeatIntervalOptions, TRANSACTION_TYPES, transactionOptions } from '../../constants';
 import { Box, Button, DialogActions, Typography } from '@mui/material';
 import { useGetCategoriesQuery } from '../../services/category';
@@ -17,7 +17,7 @@ import { setTransactionDialog } from '../../store/reducers/dialog.reducer';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import ControlledTextField from '../../Components/ControlledTextField';
+import ControlledTextField from '../../components/ControlledTextField';
 import Category from '../Category';
 import CategoryDialog from '../Category/CategoryDialog';
 

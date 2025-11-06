@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../hooks/reduxHooks";
 import { setBudgetDialog } from "../../store/reducers/dialog.reducer";
 import { ACTIONS } from "../../types";
 
-import CustomTable from "../../Components/Table";
+import CustomTable from "../../components/Table";
 import BudgetDialog from "./BudgetDialog";
 
 import styles from './Budgets.module.scss';

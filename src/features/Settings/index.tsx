@@ -5,7 +5,7 @@ import { useGetSettingsQuery, useSaveSettingsMutation } from "../../services/set
 import { defaultSettings } from "../../constants";
 import { useEffect } from "react";
 
-import ControlledSwitch from "../../Components/ControlledSwitch";
+import ControlledSwitch from "../../components/ControlledSwitch";
 import styles from './Settings.module.scss';
 
 const Settings = () => {

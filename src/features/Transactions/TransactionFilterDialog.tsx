@@ -1,17 +1,17 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from "@mui/material"
 import { useForm } from "react-hook-form"
 import { TransactionFiltersForm } from "../../types"
-import { ControlledDatePicker } from "../../Components/DatePicker"
+import { ControlledDatePicker } from "../../components/DatePicker"
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useGetCategoriesQuery } from "../../services/category"
-import { ControlledSelect } from "../../Components/ControlledSelect"
+import { ControlledSelect } from "../../components/ControlledSelect"
 import { amountTypeOptions, defaultTransactionFilters } from "../../constants"
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks"
 import { setTransactionFiltersDialog } from "../../store/reducers/dialog.reducer"
 import { setTransactionFilters } from "../../store/reducers/settings.reducer";
 
-import ControlledTextField from "../../Components/ControlledTextField"
+import ControlledTextField from "../../components/ControlledTextField"
 import styles from './Transactions.module.scss';
 
 export const TransactionFiltersDialog = () => {

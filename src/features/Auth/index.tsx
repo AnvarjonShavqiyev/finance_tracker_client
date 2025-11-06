@@ -9,7 +9,7 @@ import { useMemo } from 'react';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { setToken } from '../../store/reducers/user.reducer';
 
-import ControlledTextField from '../../Components/ControlledTextField';
+import ControlledTextField from '../../components/ControlledTextField';
 
 import styles from './Auth.module.scss';
 

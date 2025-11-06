@@ -8,8 +8,8 @@ import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { setReportsAndSettingsDialog } from "../../store/reducers/dialog.reducer";
 import { RootState } from "../../store/store";
 
-import Charts from "../../Components/Charts";
-import CustomTable from "../../Components/Table";
+import Charts from "../../components/Charts";
+import CustomTable from "../../components/Table";
 import ReportsAndSettingsDialog from "./ReportsAndSettingsDialog";
 
 import styles from './Reports.module.scss';

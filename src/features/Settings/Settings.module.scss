@@ -2,7 +2,9 @@
 
 .wrapper {
     height: 100%;
-    @include flex-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .saveButton {
         align-self: flex-start;

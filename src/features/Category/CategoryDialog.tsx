@@ -12,7 +12,7 @@ import { useSnackbar } from "notistack";
 import { CONFLICT_CODE, EMPTY_STRING, SNACKBAR_ERROR } from "../../constants";
 import { setCategoryDialog } from "../../store/reducers/dialog.reducer";
 
-import ControlledTextField from "../../Components/ControlledTextField";
+import ControlledTextField from "../../components/ControlledTextField";
 
 import styles from './Category.module.scss';
 
