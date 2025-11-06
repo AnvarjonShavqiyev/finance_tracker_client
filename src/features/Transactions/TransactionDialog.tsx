@@ -9,7 +9,7 @@ import { useGetCategoriesQuery } from '@services/category';
 import { useCreateTransactionMutation, useDeleteTransactionMutation, useGetTransactionQuery, useUpdateTransactionMutation } from '@services/transaction';
 import { useGetUsersQuery } from '@services/users';
 import { skipToken } from '@reduxjs/toolkit/query';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { getTransactionBody, getTransactionTitle } from './helpers';
 import { getSubmitButtonText } from '@helpers/getSubmitButtonText';
 import { setTransactionDialog } from '@store/reducers/dialog.reducer';
@@ -36,9 +36,11 @@ export const TransactionDialog = () => {
   const {data: categoryOptions} = useGetCategoriesQuery();
   const {data: userOptions} = useGetUsersQuery();
   const {data: transaction} = useGetTransactionQuery(id ?? skipToken);
-  const [createTransaction, {isLoading: isCreateLoading}] = useCreateTransactionMutation();
-  const [updateTransaction, {isLoading: isUpdateLoading}] = useUpdateTransactionMutation();
-  const [deleteTransaction] = useDeleteTransactionMutation();
+  const [createTransaction, {isLoading: createLoading}] = useCreateTransactionMutation();
+  const [updateTransaction, {isLoading: updateLoading}] = useUpdateTransactionMutation();
+  const [deleteTransaction, {isLoading: deleteLoading}] = useDeleteTransactionMutation();
+
+  const isLoading = useMemo(() => createLoading || updateLoading || deleteLoading, [createLoading, updateLoading, deleteLoading]); 
 
   useEffect(() => {
     if (type === ACTIONS.EDIT && transaction) {
@@ -102,8 +104,8 @@ export const TransactionDialog = () => {
                 <Typography variant='body2'>If you delete this transaction, the data cannot be restored.</Typography>
             }
             <DialogActions>
-              <Button onClick={handleClose} variant="outlined">Cancel</Button>
-              <Button loading={isCreateLoading || isUpdateLoading} type='submit' variant="contained">{getSubmitButtonText(type as ACTIONS)}</Button>
+              <Button onClick={handleClose} variant="outlined" disabled={isLoading}>Cancel</Button>
+              <Button loading={isLoading} type='submit' variant="contained">{getSubmitButtonText(type as ACTIONS)}</Button>
             </DialogActions>
           </form>
         </DialogContent>

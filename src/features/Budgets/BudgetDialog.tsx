@@ -12,7 +12,7 @@ import { enqueueSnackbar } from "notistack";
 import { getSubmitButtonText } from "@helpers/getSubmitButtonText";
 import { getBudgetBody, getBudgetTitle } from "./helpers";
 import { skipToken } from "@reduxjs/toolkit/query";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import CategoryDialog from "../Category/CategoryDialog";
 import Category from "../Category";
@@ -24,13 +24,15 @@ const BudgetDialog = () => {
     const {control, handleSubmit, reset} = useForm<BudgetForm>();
     const {budgetDialog: { isOpen, type, id }} = useAppSelector((root: RootState) => root.dialog);
     
-    const {data} = useGetCategoriesQuery();
+    const {data } = useGetCategoriesQuery();
     const {data: budget} = useGetBudgetQuery(id ?? skipToken);
 
     const dispatch = useAppDispatch();
-    const [createBudget] = useCreateBudgetMutation();
-    const [editBudget] = useEditBudgetMutation();
-    const [deleteBudget] = useDeleteBudgetMutation();
+    const [createBudget, {isLoading: createLoading}] = useCreateBudgetMutation();
+    const [editBudget, {isLoading: updateLoading}] = useEditBudgetMutation();
+    const [deleteBudget, {isLoading: deleteLoading}] = useDeleteBudgetMutation();
+
+    const isLoading = useMemo(() => createLoading || deleteLoading || updateLoading, [createLoading, deleteLoading, updateLoading]);
 
     useEffect(() => {
         if (type === ACTIONS.EDIT && budget) {
@@ -88,8 +90,8 @@ const BudgetDialog = () => {
                      : <Typography>Do you really want to delete this budget? If you delete, you can't restore it.</Typography>
                 }
                 <DialogActions>
-                    <Button variant="outlined" onClick={handleClose}>Cancel</Button>
-                    <Button variant="contained" type="submit">{getSubmitButtonText(type as ACTIONS)}</Button>
+                    <Button variant="outlined" disabled={isLoading} onClick={handleClose}>Cancel</Button>
+                    <Button variant="contained" type="submit" loading={isLoading}>{getSubmitButtonText(type as ACTIONS)}</Button>
                 </DialogActions> 
             </form>
         </DialogContent>

@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { SettingsForm } from "@customTypes";
 import { useGetSettingsQuery, useSaveSettingsMutation } from "@services/settings";
@@ -13,8 +13,8 @@ const Settings = () => {
         defaultValues: defaultSettings,
     });
 
-    const {data} = useGetSettingsQuery();
-    const [saveSettings] = useSaveSettingsMutation();
+    const {data, isLoading: settingsLoading} = useGetSettingsQuery();
+    const [saveSettings, {isLoading: saveLoading}] = useSaveSettingsMutation();
 
     useEffect(() => {
         if (data) {
@@ -27,13 +27,19 @@ const Settings = () => {
     };
 
     return <Box className={styles.wrapper}>
-        <Box>
-            <Typography>Settings</Typography>
-            <form onSubmit={handleSubmit(onSubmit)} id="settingsForm">
-                <ControlledSwitch label="Send daily report" control={control} name="sendDailyReports" />
-            </form>
-        </Box>
-        <Button className={styles.saveButton} type="submit" form="settingsForm" variant="contained">Save</Button>
+        {
+            settingsLoading ? 
+            <CircularProgress /> :
+            <>
+                <Box>
+                    <Typography>Settings</Typography>
+                    <form onSubmit={handleSubmit(onSubmit)} id="settingsForm">
+                        <ControlledSwitch label="Send daily report" control={control} name="sendDailyReports" />
+                    </form>
+                </Box>
+                <Button className={styles.saveButton} type="submit" form="settingsForm" variant="contained" loading={saveLoading}>Save</Button>
+            </>
+        }
     </Box>
 }
 

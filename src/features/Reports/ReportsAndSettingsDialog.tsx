@@ -18,7 +18,7 @@ const ReportsAndSettingsDialog = () => {
     const {control, handleSubmit} = useForm<DownloadReportsAndSettingsForm>();
 
     const dispatch = useAppDispatch();
-    const [downloadReport] = useLazyDownloadReportQuery();
+    const [downloadReport, {isLoading: downloadLoading}] = useLazyDownloadReportQuery();
 
     const isDownloadMode = useMemo(() => {
         return type === REPORTS_DIALOG_TYPE.DOWNLOAD;
@@ -56,8 +56,8 @@ const ReportsAndSettingsDialog = () => {
                 <ControlledTextField control={control} name="topNTransaction" label="Enter N for top transactions" />
                 <ControlledSelect control={control} name="period" label="Select period (Income vs. Expense report)" options={periodOptions} />
                 <DialogActions>
-                    <Button variant="outlined" onClick={onClose}>Cancel</Button>
-                    <Button variant="contained" type="submit">{isDownloadMode ? 'Download' : 'Save'}</Button>
+                    <Button variant="outlined" onClick={onClose} disabled={downloadLoading}>Cancel</Button>
+                    <Button variant="contained" type="submit" loading={downloadLoading}>{isDownloadMode ? 'Download' : 'Save'}</Button>
                 </DialogActions>
             </form>
         </DialogContent>

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { ACTIONS, CategoryForm, ErrorMessage } from "@customTypes";
 import { useCreateCategoryMutation, useDeleteCategoryMutation, useGetCategoryQuery, useUpdateCategoryMutation } from "@services/category";
 import { skipToken } from "@reduxjs/toolkit/query";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { getSubmitButtonText } from "@helpers/getSubmitButtonText";
 import { getCategoryTitle } from "./helpers";
 import { useSnackbar } from "notistack";
@@ -23,10 +23,12 @@ const CategoryDialog = () => {
     const { data } = useGetCategoryQuery(id ?? skipToken);
     
     const dispatch = useAppDispatch();
-    const [createCategory] = useCreateCategoryMutation();
-    const [updateCategory] = useUpdateCategoryMutation();
-    const [deleteCategory] = useDeleteCategoryMutation();
+    const [createCategory, {isLoading: createLoading}] = useCreateCategoryMutation();
+    const [updateCategory, {isLoading: updateLoading}] = useUpdateCategoryMutation();
+    const [deleteCategory, {isLoading: deleteLoading}] = useDeleteCategoryMutation();
 
+    const isLoading = useMemo(() => createLoading || deleteLoading || updateLoading, [createLoading, deleteLoading, updateLoading]);
+    
     useEffect(() => {
         if (type === ACTIONS.EDIT && data?.payload) {
             reset(data.payload);
@@ -77,8 +79,8 @@ const CategoryDialog = () => {
                         <Typography variant='body2'>If you delete this category, the data cannot be restored.</Typography>
                     }
                     <DialogActions>
-                        <Button onClick={handleClose} variant="outlined">Cancel</Button>
-                        <Button type="submit" variant="contained">
+                        <Button onClick={handleClose} variant="outlined" disabled={isLoading}>Cancel</Button>
+                        <Button type="submit" variant="contained" loading={isLoading}>
                             {getSubmitButtonText(type as ACTIONS)}
                         </Button>
                     </DialogActions>
