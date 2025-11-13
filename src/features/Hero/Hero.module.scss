@@ -1,0 +1,9 @@
+@use '../../styles/index.scss' as *;
+
+.container {
+    @include section-flex;
+    @include flex-center;
+    color: $linkColor;
+    text-align: center;
+    height: calc(100% - $navbarHeight)
+}
