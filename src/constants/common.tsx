@@ -1,3 +1,8 @@
+import { CiWallet } from "react-icons/ci";
+import { GrTransaction } from "react-icons/gr";
+import { TbReportAnalytics } from "react-icons/tb";
+import { CiSettings } from "react-icons/ci";
+
 export const EMPTY_STRING = '';
 export const HYPHEN = '-';
 export const SNACKBAR_ERROR = 'error';
@@ -16,23 +21,31 @@ export const CONFLICT_CODE = 409;
 export const NOT_FOUND_CODE = 404;
 
 export const AUTO_HIDE_SNACKS = 2000;
+export const MOBILE_SCREEN_SIZE = 610;
+export const HIDE_BAR_NAME_SIZE = 535;
+
+export const BUTTON_ICON_SIZE = 24;
 
 export const SIDEBAR_ROUTES = [
     {
         title: "Transactions",
-        url: "/dashboard/transactions"
+        url: "/dashboard/transactions",
+        icon: <GrTransaction />
     },
     {
         title: "Budgets",
-        url: "/dashboard/budgets"
+        url: "/dashboard/budgets",
+        icon: <CiWallet/>
     },
     {
         title: "Reports",
-        url: "/dashboard/reports"
+        url: "/dashboard/reports",
+        icon: <TbReportAnalytics />
     },
     {
         title: "Settings",
-        url: "/dashboard/settings"
+        url: "/dashboard/settings",
+        icon: <CiSettings />
     },
 ];
 

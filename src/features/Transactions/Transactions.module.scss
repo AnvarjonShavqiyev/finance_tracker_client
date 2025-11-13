@@ -11,7 +11,8 @@
 }
 
 .form {
-    width: $transactionFormWidth;
+    width: 100%;
+    max-width: $transactionFormWidth;
     @include section-flex;
     
     .categoryWrapper {
@@ -23,7 +24,8 @@
 
 
 .settingsWrapper {
-    width: $settingsWrapperWidth;
+    width: 100%;
+    max-width: $settingsWrapperWidth;
     @include section-flex;
     
     .datePickers {
@@ -35,5 +37,14 @@
         display: flex;
         align-items: center;
         gap: 10px; 
+    }
+}
+
+@media only screen and (max-width: 423px) {
+    .container {
+        .title {
+            @include section-flex;
+            align-items: flex-start;
+        };
     }
 }

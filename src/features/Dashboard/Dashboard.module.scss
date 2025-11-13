@@ -17,3 +17,10 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 610px) {
+    .container {
+        flex-direction: column;
+    }
+}

@@ -9,7 +9,7 @@
     height: 100%;
 
     .container {
-        width: $containerWidth;
+        max-width: $containerWidth;
         margin: 0 auto;
         height: 100%;
     }

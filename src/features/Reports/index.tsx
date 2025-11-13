@@ -1,6 +1,6 @@
 import { Box, CircularProgress, Divider, IconButton, Tooltip, Typography } from "@mui/material";
 import { useGetSpendingVsIncomeQuery, useGetSpendsByCategoryQuery, useGetTopNTransactionsQuery } from "@services/reports";
-import { REPORTS_DIALOG_TYPE, transactionBaseColumns } from "@constants";
+import { BUTTON_ICON_SIZE, REPORTS_DIALOG_TYPE, transactionBaseColumns } from "@constants";
 import { getSpendsByCategoryOptions, getSpendsVsIncomeOptions } from "./helpers";
 import { FiDownload } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -38,10 +38,10 @@ const Reports = () => {
                     <Typography>Reports</Typography>
                     <Box>
                         <Tooltip placement="top" title="Settings">
-                            <IconButton onClick={() => openReportsAnsSettingsDialog(REPORTS_DIALOG_TYPE.SETTINGS)}><IoSettingsOutline width={24}/></IconButton>
+                            <IconButton onClick={() => openReportsAnsSettingsDialog(REPORTS_DIALOG_TYPE.SETTINGS)}><IoSettingsOutline width={BUTTON_ICON_SIZE}/></IconButton>
                         </Tooltip>
                         <Tooltip placement="top" title="Download reports">
-                            <IconButton onClick={() => openReportsAnsSettingsDialog(REPORTS_DIALOG_TYPE.DOWNLOAD)}><FiDownload width={24}/></IconButton>
+                            <IconButton onClick={() => openReportsAnsSettingsDialog(REPORTS_DIALOG_TYPE.DOWNLOAD)}><FiDownload width={BUTTON_ICON_SIZE}/></IconButton>
                         </Tooltip>
                     </Box>
                 </Box>

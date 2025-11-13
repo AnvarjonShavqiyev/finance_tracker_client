@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "@hooks/reduxHooks";
 import { ACTIONS } from "@customTypes";
 import { TransactionDialog } from "./TransactionDialog";
 import { useGetTransactionsQuery } from "@services/transaction";
-import { transactionTableColumns } from "@constants";
+import { BUTTON_ICON_SIZE, transactionTableColumns } from "@constants";
 import { setTransactionDialog, setTransactionFiltersDialog } from "@store/reducers/dialog.reducer";
 import { CiFilter } from "react-icons/ci";
 import { TransactionFiltersDialog } from "./TransactionFilterDialog";
@@ -31,7 +31,7 @@ const Transactions = () => {
         <Typography>Transactions</Typography>
         <Box>
           <Tooltip placement="top" title="Filters">
-            <IconButton onClick={handleOpenFiltersDialog}><CiFilter width={24}/></IconButton>
+            <IconButton onClick={handleOpenFiltersDialog}><CiFilter width={BUTTON_ICON_SIZE}/></IconButton>
           </Tooltip>
           <Button variant="contained" onClick={handleOpen}>Create transaction</Button>
         </Box>

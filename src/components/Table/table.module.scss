@@ -1,0 +1,58 @@
+.tableContainer {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 8px 16px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f5f5f5;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+      background-color: #fff;
+    }
+
+    td {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      font-size: 16px;
+
+      &::before {
+        content: attr(data-label); 
+        font-weight: 600;
+      }
+    }
+  }
+}

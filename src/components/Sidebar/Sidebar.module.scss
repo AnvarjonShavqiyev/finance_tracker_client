@@ -4,15 +4,18 @@
 .container {
   @include section-flex;
   align-items: center;
-  min-width: $sidebarMinWidth;
+  max-width: $sidebarMinWidth;
   padding: 20px;
   height: 100%;
 
   a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     text-decoration: none;
     color: $sidebarLinkColor;
-    padding: 10px 14px;
+    padding: 10px 14px;  
     border-radius: 8px;
     transition: all 0.3s ease;
 
@@ -23,6 +26,23 @@
     &.active {
       background-color: $sidebarActiveLinkBackColor;
       color: $linkColor;
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .container {
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $mobileBarHeight;        
+    max-width: 100%;
+    backdrop-filter: blur(10px);
+
+    a {
+      justify-content: center;
     }
   }
 }
